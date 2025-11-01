@@ -2,30 +2,31 @@
 
 ## Project Overview
 
-This project develops and evaluates machine learning surrogate models to predict the deformation behavior of a soft bellow actuator based on geometric and loading parameters. The models serve as computationally efficient alternatives to Finite Element Analysis (FEA) simulations performed in ANSYS.
+The main goal of this project is to develop and evaluate a machine learning model to preduct the deformation behavior of a Soft Bellow Actuator based on its geometric and loading parameters. These models should serve as computationally efficient alternatives to Finite Element Analysis (FEA) simulations which performed in ANSYS as per the assignment.
 
 **MATLAB Version:** R2025b (25.2.0.2998904)
 
 ## Dataset Information
 
-The dataset contains **1,134 unique combinations** of input parameters simulated using FEA in ANSYS.
+This dataset contains **1,134 unique combinations** of input parameters simulated using FEA in ANSYS.
 
 ### Input Features (4 parameters):
 1. **Height** - Actuator height dimension
 2. **Length** - Actuator length dimension
 3. **Pressure** - Applied internal pressure
-4. **Thickness** - Wall thickness
+4. **Thickness** - Actuator Wall thickness
 
 ### Output Variable:
-- **Deformation** - Resulting actuator deformation (target variable)
+- **Deformation** - The Target variable  for the actuator.
 
 ### Data File:
 - `Soft_Actuator_FEA_Dataset.csv` (Update the file path in the script)
 
 ## Project Structure
 
-The complete analysis is contained in a single MATLAB script:
-- **`SR_actuator_Script3.m`** - Main script with all 18 sections (described below)
+
+The complete analysis is scripted in a single MATLAB script file:
+- **`SR_actuator_Script3.m`** - The Main script has all 18 sections and described as follows:
 
 ## Script Sections and Workflow
 
