@@ -257,9 +257,6 @@ x_new2 = [8.0, 100, 5000, 1.2]; % Near or beyond training bounds
 
 Sudheer Raj
 
-## License
-
-Please specify your license here.
 
 ## Acknowledgments
 
