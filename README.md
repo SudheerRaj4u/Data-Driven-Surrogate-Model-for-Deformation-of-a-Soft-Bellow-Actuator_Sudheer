@@ -204,15 +204,14 @@ x_new2 = [8.0, 100, 5000, 1.2]; % Near or beyond training bounds
     {'Length'     }        75       75       17.086      50     100
     {'Thickness'  }       1.1      1.1     0.081686       1     1.2
     {'Deformation'}    41.365       36       24.186       5     139
-
-RF Test RMSE = 4.4762
-GPR Test RMSE = 0.4388
-RF Interpolative: 18.29
-GPR Interpolative: 17.13 (Uncertainty: 0.57)
-RF Edge: 63.98
-GPR Edge: 63.58 (Uncertainty: 0.61)
-Interpolative prediction confidence is high. Model output can be trusted.
-Edge prediction confidence is high. Model output can be trusted.
+    RF Test RMSE = 4.4762
+    GPR Test RMSE = 0.4388
+    RF Interpolative: 18.29
+    GPR Interpolative: 17.13 (Uncertainty: 0.57)
+    RF Edge: 63.98
+    GPR Edge: 63.58 (Uncertainty: 0.61)
+    Interpolative prediction confidence is high. Model output can be trusted.
+    Edge prediction confidence is high. Model output can be trusted.
 
 
 ### Console Outputs
@@ -223,7 +222,7 @@ Edge prediction confidence is high. Model output can be trusted.
 - Edge predictions (RF and GPR with uncertainty)
 - Confidence assessments and FEA recommendations
 
-### Visualizations (11 Figures)
+### Visualizations (13 Figures)
 1. Histogram of Deformation distribution
 2. RF: CV RMSE vs. Number of Trees
 3. GPR: CV RMSE vs. Sigma
