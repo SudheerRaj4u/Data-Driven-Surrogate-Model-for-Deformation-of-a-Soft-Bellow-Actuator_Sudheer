@@ -181,7 +181,9 @@ x_new2 = [8.0, 100, 5000, 1.2]; % Near or beyond training bounds
 4. **Check Console:** Numerical results and recommendations printed to command window
 
 ## Expected Outputs
+
 >> SR_actuator_Script3
+
     Pressure    Height    Length    Thickness    Deformation
     ________    ______    ______    _________    ___________
 
