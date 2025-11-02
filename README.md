@@ -2,7 +2,8 @@
 
 ## Project Overview
 
-The main goal of this project is to develop and evaluate a machine learning model to preduct the deformation behavior of a Soft Bellow Actuator based on its geometric and loading parameters. These models should serve as computationally efficient alternatives to Finite Element Analysis (FEA) simulations which performed in ANSYS as per the assignment.
+The main goal of this project is to develop and evaluate a machine learning model to predict the deformation behavior of a Soft Bellow Actuator based on its geometric and loading parameters. 
+These models should serve as computationally efficient alternatives to Finite Element Analysis (FEA) simulations which are performed in ANSYS as per the assignment.
 
 **MATLAB Version:** R2025b (25.2.0.2998904)
 
@@ -34,27 +35,26 @@ The complete analysis is scripted in a single MATLAB script file:
 ```matlab
 data = readtable("path/to/Soft_Actuator_FEA_Dataset.csv");
 ```
-- Imports CSV dataset
+- Imports CSV dataset file
 - Displays first few rows to verify structure
-- **Action Required:** Update the file path to match your local directory
+- **Required Action:** Update the file path to match your local directory
 
 ### 2. Descriptive Statistics and Visualization
-- Computes statistical measures for all numeric variables:
+- Tp Compute statistical measures for all numeric variables:
   - Mean, Median, Standard Deviation
   - Minimum and Maximum values
-- Creates histogram visualization of deformation distribution
-- Helps understand data range and variability
+- Histogram visualization of deformation distribution
+- It helps us understand data range and variability
 
 ### 3. Reproducibility Setup
 ```matlab
-rng(42); % Sets random seed
+rng(42); % It sets random seed
 ```
-- Ensures reproducible results across multiple runs
+- It make sures reproducible results towards multiple runs
 
 ### 4. Feature and Target Definition
-- Separates input features (Height, Length, Pressure, Thickness)
-- Isolates target variable (Deformation)
-- Prepares data matrices for modeling
+- To separate input features (Height, Length, Pressure, Thickness) and isolates target variable (Deformation)
+- Preparing data matrices for modeling
 
 ### 5. Train-Test Split (80-20)
 - **Training set:** 80% of data (~907 samples)
@@ -63,9 +63,8 @@ rng(42); % Sets random seed
 - Test set provides independent evaluation
 
 ### 6. K-Fold Cross-Validation Setup
-- **K = 5 folds** for robust hyperparameter tuning
-- Each fold uses different train/validation subsets
-- Reduces overfitting risk during model selection
+- **K = 5 folds** for robust hyperparameter tuning and each fold uses different train/validation subsets
+- It reduces overfitting risk during model selection
 
 ### 7. Model Selection and Hyperparameter Tuning
 
@@ -182,6 +181,37 @@ x_new2 = [8.0, 100, 5000, 1.2]; % Near or beyond training bounds
 4. **Check Console:** Numerical results and recommendations printed to command window
 
 ## Expected Outputs
+>> SR_actuator_Script3
+    Pressure    Height    Length    Thickness    Deformation
+    ________    ______    ______    _________    ___________
+
+      1000        5         50          1            15     
+      1500        5         50          1            21     
+      2000        5         50          1            26     
+      2500        5         50          1            31     
+      3000        5         50          1            35     
+      3500        5         50          1            40     
+      4000        5         50          1            44     
+      4500        5         50          1            48     
+
+       Variable         Mean     Median      Std       Min     Max 
+    _______________    ______    ______    ________    ____    ____
+
+    {'Pressure'   }      3000     3000       1291.6    1000    5000
+    {'Height'     }       6.5      6.5       1.0004       5       8
+    {'Length'     }        75       75       17.086      50     100
+    {'Thickness'  }       1.1      1.1     0.081686       1     1.2
+    {'Deformation'}    41.365       36       24.186       5     139
+
+RF Test RMSE = 4.4762
+GPR Test RMSE = 0.4388
+RF Interpolative: 18.29
+GPR Interpolative: 17.13 (Uncertainty: 0.57)
+RF Edge: 63.98
+GPR Edge: 63.58 (Uncertainty: 0.61)
+Interpolative prediction confidence is high. Model output can be trusted.
+Edge prediction confidence is high. Model output can be trusted.
+
 
 ### Console Outputs
 - Descriptive statistics table
@@ -246,13 +276,6 @@ x_new2 = [8.0, 100, 5000, 1.2]; % Near or beyond training bounds
 4. **Model Updates:** Retrain periodically as more FEA data becomes available
 5. **Threshold Tuning:** Adjust uncertainty threshold (0.65) based on application risk tolerance
 
-## Future Enhancements
-
-- Export trained models for deployment (`.mat` files)
-- Implement additional algorithms (Support Vector Regression, Neural Networks)
-- Multi-objective optimization integration
-- Interactive GUI for predictions
-- Automated hyperparameter optimization (Bayesian optimization)
 
 ## Author
 
