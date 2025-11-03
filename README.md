@@ -69,7 +69,8 @@ rng(42); % It sets random seed
 ### 7. Model Selection and Hyperparameter Tuning
 
 #### A. Random Forest (RF) Cross-Validation
-- **Hyperparameter Grid:** Number of trees [10, 25, 50, 100, 200, 400]
+- **Hyperparameter Grid:** 
+- To perform using Bayesian optimization approach
 - Method: Bagging with decision trees
 - Minimum leaf size: 5
 - Evaluates CV RMSE for each configuration
