@@ -211,7 +211,7 @@ x_new2 = [8.0, 100, 5000, 1.2]; % Near or beyond training bounds
     RF Edge: 63.98
     GPR Edge: 63.58 (Uncertainty: 0.61)
     Interpolative prediction confidence is high. Model output can be trusted.
-    Edge prediction confidence is high. Model output can be trusted.
+    Edge prediction has high uncertainty. Recommend running FEA to validate.
 
 
 ### Console Outputs
