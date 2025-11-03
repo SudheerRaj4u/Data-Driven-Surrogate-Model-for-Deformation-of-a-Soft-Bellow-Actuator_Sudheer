@@ -266,7 +266,7 @@ fprintf('RF Edge: %.2f\n', pred_rf_2);
 fprintf('GPR Edge: %.2f (Uncertainty: %.2f)\n', pred_gpr_2, std_gpr_2);
 
 % Threshold for uncertainty (example)
-uncertainty_threshold = 0.65;
+uncertainty_threshold = 0.6;
 
 % Confidence assessment and recommendation for interpolative point
 if std_gpr_1 < uncertainty_threshold
@@ -281,3 +281,4 @@ if std_gpr_2 < uncertainty_threshold
 else
     fprintf('Edge prediction has high uncertainty. Recommend running FEA to validate.\n');
 end
+
